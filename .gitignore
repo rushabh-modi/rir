@@ -10,6 +10,7 @@
 # Ignore all environment files (except templates).
 /.env*
 !/.env*.erb
+!/.env.example
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -33,3 +34,17 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# hide gemset name
+.ruby-gemset
+
+# Ruby-lsp config
+.ruby-lsp/
+
+# Vite Ruby
+/public/vite*
+node_modules
+# Vite uses dotenv and suggests to ignore local-only env files. See
+# https://vitejs.dev/guide/env-and-mode.html#env-files
+*.local
+

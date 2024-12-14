@@ -1,5 +1,11 @@
 require "active_support/core_ext/integer/time"
 
+Rails.application.default_url_options = {
+  protocol: "http",
+  host: "localhost",
+  port: ENV.fetch("RAILS_PORT", 3000).to_i
+}
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
